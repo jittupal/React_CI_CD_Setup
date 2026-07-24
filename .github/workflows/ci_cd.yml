@@ -1,0 +1,16 @@
+name: "react-sample-ci-cd"
+
+on: 
+    push:
+        branches:
+            - master
+            - test
+
+jobs:
+    build-and-test:
+        runs-on: ubuntu-latest
+
+        - name: "setup node js"
+          usage: actions/setup-node@v4
+          with: 
+            node-version: '22'
